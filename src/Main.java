@@ -51,7 +51,25 @@ class Main {
         input.close();
     }
 
+    public static void findAverageForEachLoop(){
+
+        double[] numbers = {4.2, 5.5, 2.0, 8.2, 9.6};
+
+        double total = 0;
+
+        // find the sum of all elements
+        for (double num : numbers) {
+            total = total + num;
+        }
+
+        // find the average
+        double average = total/ numbers.length;
+
+        // print the average
+        System.out.println(average);
+    }
+
     public static void main(String[] args) {
-        Main.findAverageOfArray();
+        Main.findAverageForEachLoop();
     }
 }
