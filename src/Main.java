@@ -88,7 +88,27 @@ class Main {
         System.out.println(smallest);
     }
 
+    public static void multiplyBy10(){
+
+        // an array of scores
+        int[] numbers = {43, 78, 23, 45};
+
+        // declare new array of the same size
+        int[] newNumbers = new int[numbers.length];
+
+        // loop through each element of numbers
+        // multiply them by 10
+        for(int index =0 ; index < numbers.length;index++){
+            newNumbers[index] = numbers[index] *10;
+        }
+
+        // print the new array
+        for (int num : newNumbers) {
+            System.out.println(num);
+        }
+    }
+
     public static void main(String[] args) {
-        Main.smallestInArray();
+        Main.multiplyBy10();
     }
 }
