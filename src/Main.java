@@ -292,17 +292,69 @@ class Main {
         input.close();
     }
 
-    void randomIntGenrator(int minimum, int maximum){
+    int randomIntGenrator(int minimum, int maximum){
         int randNumber = (int) ((Math.random() * maximum) + minimum);
-        System.out.println(randNumber);
+        return randNumber;
     }
 
+    void ScissorPaperRock(){
+        String[] options = {"Scissor","Paper","Rock"};
+
+
+
+        Scanner input = new Scanner(System.in);
+        System.out.println("""
+                \n======================\n
+                0: Scissor
+                1: Paper
+                2: Rock
+                """);
+        while (true){
+
+            int computerChoice = randomIntGenrator(0,3);
+            int userChoice;
+            while (true){
+                System.out.println("choose betn 0 to 2");
+                userChoice = input.nextInt();
+                if (userChoice >= 0 && userChoice <= 2){
+                    break;
+                }
+            }
+
+            System.out.println("user choice: "+ options[userChoice]+
+                                "\ncomp choice: "+options[computerChoice]);
+
+            if(userChoice == computerChoice){
+                //its a draw
+                System.out.println("its a draw");
+                continue;
+            }
+
+            /*
+            case for user to win
+                user        computer
+                scissor     paper
+                paper       rock
+                rock        scissor
+             */
+            if((userChoice == 0 && computerChoice == 1 )||(userChoice == 1 && computerChoice == 2)|| (userChoice == 2 && computerChoice == 0) ){
+                System.out.println("user is winner");
+            }else {
+                System.out.println("Computer is winner");
+            }
+            break;
+
+        }
+
+    }
     public static void main(String[] args) {
 
         Main obj = new Main();
 
+        while (true){
+            obj.ScissorPaperRock();
+        }
 
-        obj.randomIntGenrator(1,100);
 
 
 
