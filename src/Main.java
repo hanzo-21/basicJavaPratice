@@ -90,6 +90,7 @@ class Main {
 
     public static void multiplyBy10(){
 
+
         // an array of scores
         int[] numbers = {43, 78, 23, 45};
 
@@ -107,8 +108,28 @@ class Main {
             System.out.println(num);
         }
     }
+    // create printNumbers method
+    void printNumbers() {
+        // print 5
+        System.out.println(5);
+                // print 100
+        System.out.println(100);
+    }
 
+    // create a method named findCube()
+    void findCube() {
+        int number = 5;
+
+        // find the cube of number
+        int result = number * number * number;
+        System.out.println(result);
+    }
     public static void main(String[] args) {
-        Main.multiplyBy10();
+
+        // creating object of Main class
+        Main obj = new Main();
+
+        // call findCube using the object
+        obj.findCube();
     }
 }
