@@ -153,25 +153,136 @@ class Main {
         return factorial;
     }
 
+    void shorterString(){
 
-    public static void main(String[] args) {
+        // get string inputs
+        Scanner input = new Scanner(System.in);
+        String first = input.nextLine();
+        String second = input.nextLine();
+
+        // get length of both strings
+        int firstLength = first.length();
+        int secondLength = second.length();
+
+        // compare the length of strings
+        if (firstLength < secondLength) {
+            System.out.println(first);
+        }
+        else {
+            System.out.println(second);
+        }
+
+        input.close();
+    }
+
+    void lastChar(){
+
+        Scanner input = new Scanner(System.in);
+
+        // get String input
+        String text = input.nextLine();
+
+        // find the last character of the string
+        // Hint: The last character of the string is at position length - 1
+        char last = text.charAt(text.length()-1);
+        System.out.println(last);
+
+        input.close();
+    }
+
+    void conCatString(){
+
+        // take two string inputs
+        Scanner input = new Scanner(System.in);
+        String firstName = input.nextLine();
+        String lastName = input.nextLine();
+
+        // join strings using concat
+        // add a space between two strings
+        // Hint: Join first string with a space " " and
+        // join the resulting string with second string
+        String joinedString = firstName.concat(" ");
+        joinedString = joinedString.concat(lastName);
+
+        System.out.println(joinedString);
+
+        input.close();
+    }
+
+    void compareString(){
+
+        // take two string inputs
+        Scanner input = new Scanner(System.in);
+        String first = input.nextLine();
+        String second = input.nextLine();
+
+        // compare two strings
+        boolean result = first.equals(second);
+
+        // print the result
+        System.out.println(result);
+
+        input.close();
+    }
+
+    void countVowels(){
+
+        // get string input
+        Scanner input = new Scanner(System.in);
+        String text = input.nextLine();
+
+        // convert to lowercase
+        text = text.toLowerCase();
+
+        // variable to count vowels
+        int count = 0;
+
+        // run a for loop across the text string
+        for (int i = 0; i < text.length(); ++i) {
+
+            // check if each character is a vowel
+            // Hint: Use this comparison text.charAt(i) == 'a' with each lowercase vowel characters
+            // Separate each comparison with the || operator (comparison1 || comparison2 || ...)
+            char[] vowels = {'a','e','i','o','u'};
+
+            for (char vowl: vowels){
+                if (vowl == text.charAt(i)){
+                    ++count;
+                    break;
+                }
+            }
 
 
+        }
 
+        System.out.println(count);
 
+        input.close();
+    }
 
-        Main obj = new Main();
+    void nesteedLoop(){
 
-        // get user input
         Scanner input = new Scanner(System.in);
         int n = input.nextInt();
 
-        // call the method with input value as parameter
-        int total = obj.computeFactorial(n);
-        System.out.println(total);
+        // iterate the outer loop n times
+        for (int i = 0; ___; ++i) {
+
+            // iterate the inner loop 2 times
+            for (int j = 0; ___; ++j) {
+                System.out.println("*");
+            }
+        }
 
         input.close();
+    }
 
+    public static void main(String[] args) {
+
+        Main obj = new Main();
+
+
+        obj.countVowels();
 
 
 
