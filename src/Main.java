@@ -140,6 +140,19 @@ class Main {
         return product;
     }
 
+    // create the computeFactorial() method with a parameter
+    int computeFactorial(int n) {
+
+        int factorial = 1;
+
+        // run a for loop from 1 to the method parameter
+        for (int i = 2 ; i <= n ; i++) {
+            factorial = factorial * i;
+        }
+        // return factorial
+        return factorial;
+    }
+
 
     public static void main(String[] args) {
 
@@ -147,10 +160,17 @@ class Main {
 
 
 
-        // random number from 1 to 100
-        int randomNumber = (int) (Math.random() *100 +1);
+        Main obj = new Main();
 
-        System.out.println(randomNumber);
+        // get user input
+        Scanner input = new Scanner(System.in);
+        int n = input.nextInt();
+
+        // call the method with input value as parameter
+        int total = obj.computeFactorial(n);
+        System.out.println(total);
+
+        input.close();
 
 
 
