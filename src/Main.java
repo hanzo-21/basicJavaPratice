@@ -132,22 +132,25 @@ class Main {
         System.out.println(result);
     }
 
+    // create method
+    int getProduct(int number1, int number2) {
+        // find the product and return it
+        int product = number1 * number2;
+
+        return product;
+    }
 
 
     public static void main(String[] args) {
 
-        // take input value
-        Scanner input = new Scanner(System.in);
-        double number1 = input.nextDouble();
-        double number2 = input.nextDouble();
 
-        // creating object of Main class
-        Main obj = new Main();
 
-                // call the method with arguments number1 and number2
-        obj.addNumbers(number1,number2);
 
-        input.close();
+
+        // random number from 1 to 100
+        int randomNumber = (int) (Math.random() *100 +1);
+
+        System.out.println(randomNumber);
 
 
 
