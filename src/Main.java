@@ -292,12 +292,17 @@ class Main {
         input.close();
     }
 
+    void randomIntGenrator(int minimum, int maximum){
+        int randNumber = (int) ((Math.random() * maximum) + minimum);
+        System.out.println(randNumber);
+    }
+
     public static void main(String[] args) {
 
         Main obj = new Main();
 
 
-        obj.printTheLargest();
+        obj.randomIntGenrator(1,100);
 
 
 
