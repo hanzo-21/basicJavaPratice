@@ -363,12 +363,21 @@ class Main {
     }
 
 
+    void factorial (float n ){
+        if(n <=1 ){
+            return 1;
+        }
+        else{
+            return factorial(n-1) * factorial(n-2);
+        }
+    }
+
     public static void main(String[] args) {
 
         Main obj = new Main();
 
         
-        obj.Fibi(10);
+        obj.factorial(10);
 
 
 
